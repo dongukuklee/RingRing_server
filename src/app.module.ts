@@ -1,10 +1,12 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
+import { WeatherController } from './weather/weather.controller';
+import { WeatherService } from './weather/weather.service';
 
 @Module({
   imports: [],
-  controllers: [AppController],
-  providers: [AppService],
+  controllers: [WeatherController],
+  //controllers 는 express 에서 Router와 유사하다.
+  //url을 가져오고 함수를 실행한다.
+  providers: [WeatherService],
 })
 export class AppModule {}
