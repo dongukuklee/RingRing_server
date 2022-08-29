@@ -1,5 +1,5 @@
 import { Body, Controller,Get, Param,Post } from '@nestjs/common';
-
+import axios from '@nestjs/axios'
 @Controller('weather')
 export class WeatherController {
     @Get('/')
@@ -9,6 +9,6 @@ export class WeatherController {
     
     @Post('/')
     getData(@Body() bodyData){
-        console.log(bodyData)
+        
     }
 }
